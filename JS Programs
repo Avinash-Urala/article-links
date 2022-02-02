@@ -33,3 +33,19 @@ function reverse(nums, start, end) {
     }
     return nums;
 }
+
+Middle of Linked List
+==============================================
+var middleNode = function(head) {
+    
+    var slow = head;
+    var fast = head;
+    
+    while(fast !== null && fast.next !== null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    
+    return slow;
+    
+};
