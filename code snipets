@@ -1,0 +1,32 @@
+Call(), Apply() and Bind()
+-------------------------------------
+let name = {
+  firstName: 'Avinash',
+  lastName: 'Urala',
+  printFullName: function(place, state) {
+    console.log(this.firstName +' '+ this.lastName + ' from '+ place +','+ state);
+  }
+}
+
+let name2 = {
+  firstName: 'Sachin',
+  lastName: 'Tendulakar'
+}
+
+name.printFullName.call(name2, 'Mumbai', 'Maharashtra')
+
+// With Call you can write methods which can be used on different onjects
+
+// Apply is similar to call, only difference between call() ans apply() is the 
+// way we pass the arguments
+// In apply we pass arguments in array list
+
+
+name.printFullName.apply(name2, ['Mumbai', 'Maharashtra'])
+
+// bind() - same as call(), but instead of directly calling the method it returns copy of that
+// method with passed object
+
+let printName = name.printFullName.bind(name2, 'Mumbai', 'Maharashtra');
+
+printName();
