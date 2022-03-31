@@ -30,3 +30,52 @@ name.printFullName.apply(name2, ['Mumbai', 'Maharashtra'])
 let printName = name.printFullName.bind(name2, 'Mumbai', 'Maharashtra');
 
 printName();
+
+
+===========================
+REST & SPREAD
+====================================
+// Rest and Spread Operator
+
+/* Whenever you use (...) with function to deal with any number of parameters, then you call it 
+ * Rest operator
+ */
+
+function sum(...nums) {
+  console.log(nums);
+}
+
+sum(4, 5);
+sum(4, 5, 6, 7);
+
+// rest (...) converts arguments into an array
+
+function sum1() {
+  console.log(arguments);
+}
+
+// sum2(4, 5);
+// sum2(4, 5, 6, 7);
+
+// arguments object does not work with arrow functions
+
+const sum2 = () => {
+  console.log(arguments);
+}
+
+/* As the rest operator puts the separate data values in one array, 
+   the spread does exacly opposite
+   It spreads the array into separate values */
+
+let arr1 = [1, 2, 3, 4, 5]
+let arr2 = [...arr1, 6, 7, 8]
+
+console.log(arr2)
+
+/* Find max value in an array */
+
+console.log(Math.max(...arr2))
+
+
+                   
+                   
