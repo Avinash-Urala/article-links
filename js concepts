@@ -58,4 +58,20 @@ const resultDec = arr.sort((a,b) => b - a); // descending
 
 console.log(result)
 
+======================================================================
+// Q2: Sort an array of objects by the author's last name
+
+const books = [
+{name: 'Harry Potter', author: 'Joanne Rowling'},
+{name: 'Warcross', author: 'Marie Lu'},
+{name: 'THe Hunger Games', author: 'Suzanne Collins'}
+];
+
+const result = books.sort((book1, book2) => {
+  const authorBook1 = book1.author.split(' ')[1];
+  const authorBook2 = book2.author.split(' ')[1];
+  
+  return authorBook1 < authorBook2 ? -1 : 1
+
+})
 
