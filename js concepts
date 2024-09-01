@@ -74,4 +74,43 @@ const result = books.sort((book1, book2) => {
   return authorBook1 < authorBook2 ? -1 : 1
 
 })
+=======================================================================
+// Q: Write a function which implement range
+// range(1, 50)
+// [1,2,3,.......,50]
+
+// const range = (start, end) => {
+//   const range = [];
+//   for(let i = start; i < end; i++) {
+//     range.push(i);
+//   }
+  
+//   return range;
+// }
+
+// const range = (start, end) => {
+//   return [...Array(end - start).keys()].map((el) => start + el)
+// }
+
+// console.log(range(40,50));
+
+// Write a shuffle function which mixes the elements
+
+// const shuffleItems = (arr) => {
+//  return arr.map((item) => ({ sort: Math.random(), value: item }))
+//      .sort((a, b) => a.sort - b.sort).map((a) => a.value); 
+// }
+
+// console.log(shuffleItems([1,2,3,4]))
+
+// Find the number of occurrences of minimum value in the list of numbers
+
+// const arr = [1, 2, 3, 1, 1, 1];
+
+// const minValue = Math.min(...arr);
+
+// console.log(minValue);
+
+// const minArr = arr.filter((item) => item === minValue)
+// console.log(minArr.length)
 
