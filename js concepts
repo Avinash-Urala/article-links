@@ -114,3 +114,42 @@ const result = books.sort((book1, book2) => {
 // const minArr = arr.filter((item) => item === minValue)
 // console.log(minArr.length)
 
+
+// Q: Design a class for employee which takes id and name in during
+//     construction of object and has a salary property
+
+class Employee {
+  constructor(id, name) {
+    this.id = id;
+    this.name = name;
+  }
+  
+  getId() {
+    return this.id;
+  }
+  
+  getName() {
+    return this.name;
+  }
+  
+  setSalary(salary) {
+    this.salary = salary;
+  }
+  
+  getSalary() {
+    return this.salary;
+  }
+}
+
+// Q: Design a class for manager which is employee and can have a
+//     department property.
+
+class Manager extends Employee {
+    setDepartment(department) {
+      this.department = department;
+    }
+  
+    getDepartment() {
+      return this.department;
+    }
+}
